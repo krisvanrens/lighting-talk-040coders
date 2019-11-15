@@ -13,4 +13,4 @@ reveal.js:
 
 
 html: reveal.js
-	pandoc -t revealjs -s $(OUTPUT_NAME).md -o $(OUTPUT_NAME).html -V revealjs-url=./reveal.js -V theme=black
+	pandoc -t revealjs -s $(OUTPUT_NAME).md -o $(OUTPUT_NAME).html -V revealjs-url=./reveal.js -V theme=black -f 'markdown+emoji'
