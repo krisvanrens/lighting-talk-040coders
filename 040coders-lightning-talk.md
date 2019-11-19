@@ -207,16 +207,54 @@ int main() {
 
 # ![](images/emoji_explode.png)
 
+#
+## It works for all the kids:
+* Nieces,
+* Nephews,
+* Random kids in the streets.
+
+#
+## Do it. It is your duty to prepare them.
+
 # Identifying recruitment opportunities
 
-# Write-only memory
+# Multi-threading issues
+Multiple children == multithreading issues
+
+#
+## Toy-sharing hell
+Toys are resources; races and deadlocks occur
+
+#
+## Resource overcommitment
+I guess you get it by now.
+
+# One last example
+
+#
+Hey, would you please clean up your toys?
+
+# ...
+
+#
+Hey, would you please clean up your toys?
+
+# ...
+
+#
+HEY, now will you please clean up your toys?
+
+# ...
+
+# CLEAN UP YOUR TOYS!
+
+# ...
+Sigh.
+
+#
+## Write-only memory
 
 ![](images/write-only-memory.png)
 
-# Multi-threading issues
-
-## Race conditions
-
-## Deadlocks
-
-# ..
+#
+Thanks!
