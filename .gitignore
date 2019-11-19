@@ -1,3 +1,7 @@
 reveal.js/
 
 040coders-lightning-talk.html
+
+node_modules/
+package.json
+package-lock.json
