@@ -252,8 +252,6 @@ HEY, now will you please clean up your toys?
 Sigh.
 
 #
-## Write-only memory
-
 ![](images/write-only-memory.png)
 
 #
