@@ -38,11 +38,15 @@ This is the perfect moment to bring up the topic of recursive functions!
 
 # Definition
 
-> Recursive function, in logic and mathematics, a type of function or expression predicating some concept or property of one or more variables, which is specified by a procedure that yields values or instances of that function by repeatedly applying a given relation or routine operation to known values of the function.
+> A recursive function, in logic and mathematics, is a type of function or expression predicating some concept or property of one or more variables, which is specified by a procedure that yields values or instances of that function by repeatedly applying a given relation or routine operation to known values of the function.
 
 [Encyclopaedia Britannica](https://www.britannica.com/science/recursive-function)
 
 # Coding time!
+
+#
+## Recursion
+Square one
 
 ```c++
 long spaceship_speed(long start_speed) {
@@ -55,7 +59,8 @@ int main() {
 }
 ```
 
-# Coding time!
+#
+## Recursion
 All the hip kids use lambdas
 
 ```c++
@@ -69,7 +74,8 @@ int main() {
 }
 ```
 
-# Coding time!
+#
+## Recursion
 Whoops. C++17 to the rescue!
 
 ```c++
@@ -86,8 +92,9 @@ int main() {
 }
 ```
 
-# Coding time!
-Even hipper kids code at compile-time
+#
+## Recursion
+Even hipper kids do compile-time code
 
 ```c++
 constexpr long spaceship_speed(long start_speed) {
@@ -99,8 +106,9 @@ int main() {
 }
 ```
 
-# Coding time!
-Even hipper kids code at compile-time
+#
+## Recursion
+Even hipper kids do compile-time code
 
 ```c++
 constexpr long spaceship_speed(long start_speed) {
@@ -113,7 +121,8 @@ int main() {
 ```
 ..or do they?
 
-# Coding time!
+#
+## Recursion
 Uh-oh..
 
 ```c++
@@ -122,14 +131,15 @@ constexpr long spaceship_speed(long start_speed) {
 }
 
 template<long VALUE>
-struct Silly { long value_ = VALUE; };
+struct OmgWtf { long value_ = VALUE; };
 
 int main() {
-  return Silly<spaceship_speed(1)>{}.value_;
+  return OmgWtf<spaceship_speed(1)>{}.value_;
 }
 ```
 
-# Coding time!
+#
+## Recursion
 Oh dear
 
 ```c++
@@ -138,15 +148,16 @@ constexpr long spaceship_speed(long start_speed) {
 }
 
 template<typename TYPE, TYPE VALUE>
-struct Silly { TYPE value_ = VALUE; };
+struct OmgWtf { TYPE value_ = VALUE; };
 
 int main() {
   constexpr auto value = spaceship_speed(1);
-  return Silly<decltype(value), value>{}.value_;
+  return OmgWtf<decltype(value), value>{}.value_;
 }
 ```
 
-# Coding time!
+#
+## Recursion
 Again, all the hip kids use lambdas
 
 ```c++
@@ -155,38 +166,20 @@ constexpr long spaceship_speed(long start_speed) {
 }
 
 template<typename TYPE, TYPE VALUE>
-struct Silly { TYPE value_ = VALUE; };
-
-int main() {
-  constexpr auto value = spaceship_speed(1);
-  const auto get_value = [&]() { return Silly<decltype(value), value>{}.value_; };
-
-  return get_value();
-}
-```
-
-# Coding time!
-Again, all the hip kids use lambdas
-
-```c++
-constexpr long spaceship_speed(long start_speed) {
-  return spaceship_speed(++start_speed);
-}
-
-template<typename TYPE, TYPE VALUE>
-struct Silly { TYPE value_ = VALUE; };
+struct OmgWtf { TYPE value_ = VALUE; };
 
 int main() {
   const auto get_value = []() {
     constexpr auto value = spaceship_speed(1);
-    return Silly<decltype(value), value>{}.value_;
+    return OmgWtf<decltype(value), value>{}.value_;
   };
 
   return get_value();
 }
 ```
 
-# Coding time!
+#
+## Recursion
 IIFE to complete the mess
 
 ```c++
@@ -195,26 +188,17 @@ constexpr long spaceship_speed(long start_speed) {
 }
 
 template<typename TYPE, TYPE VALUE>
-struct Silly { TYPE value_ = VALUE; };
+struct OmgWtf { TYPE value_ = VALUE; };
 
 int main() {
   return [] {
       constexpr auto value = spaceship_speed(1);
-      return Silly<decltype(value), value>{}.value_;
+      return OmgWtf<decltype(value), value>{}.value_;
     }();
 }
 ```
 
 # ![](images/emoji_explode.png)
-
-#
-## It works for all the kids:
-* Nieces,
-* Nephews,
-* Random kids in the streets.
-
-#
-## Do it. It is your duty to prepare them.
 
 # Identifying recruitment opportunities
 
@@ -223,10 +207,22 @@ Multiple children == multithreading issues
 
 #
 ## Toy-sharing hell
-Toys are resources; races and deadlocks occur
+Toys are resources; races and deadlocks occur.
 
 #
-## Resource overcommitment
+## Toy-sharing hell
+Toys are resources; races and deadlocks occur.
+
+All the time.
+
+#
+## Another one: resource overcommitment
+Holidays, birthday parties anyone?
+
+#
+## Another one: resource overcommitment
+Holidays, birthday parties anyone?
+
 I guess you get it by now.
 
 # One last example
@@ -234,21 +230,25 @@ I guess you get it by now.
 #
 Hey, would you please clean up your toys?
 
-# ...
+# ![](images/emoji_boy.png)![](images/emoji_girl.png)
+## ...
 
 #
 Hey, would you please clean up your toys?
 
-# ...
+# ![](images/emoji_boy.png)![](images/emoji_girl.png)
+## ...
 
 #
 HEY, now will you please clean up your toys?
 
-# ...
+# ![](images/emoji_boy.png)![](images/emoji_girl.png)
+## ...
 
 # CLEAN UP YOUR TOYS!
 
-# ...
+# ![](images/emoji_boy.png)![](images/emoji_girl.png)
+## ...
 Sigh.
 
 #
