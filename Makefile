@@ -20,4 +20,4 @@ html: reveal.js
 
 pdf:
 	npm i decktape
-	$(npm bin)/decktape -s 1280x720 automatic file://$(pwd)/040coders-lightning-talk.html
+	$(shell npm bin)/decktape -s 1920x1080 automatic file://$(shell pwd)/040coders-lightning-talk.html $(OUTPUT_NAME).pdf
