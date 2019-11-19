@@ -1,0 +1,13 @@
+--- reveal.js/js/reveal.js	2019-04-08 10:36:33.000000000 +0200
++++ reveal.js/js/reveal.js_	2019-11-19 21:19:28.221676411 +0100
+@@ -39,8 +39,8 @@
+ 
+ 			// The "normal" size of the presentation, aspect ratio will be preserved
+ 			// when the presentation is scaled to fit different resolutions
+-			width: 960,
+-			height: 700,
++			width: 1280,
++			height: 720,
+ 
+ 			// Factor of the display size that should remain empty around the content
+ 			margin: 0.04,

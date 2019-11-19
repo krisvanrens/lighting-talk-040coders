@@ -10,7 +10,14 @@ reveal.js:
 	tar -xzvf master.tar.gz
 	rm master.tar.gz
 	mv reveal.js-master reveal.js
+	patch -p0 < revealjs_fix_theme_css.patch
+	patch -p0 < revealjs_fix_dimensions.patch
 
 
 html: reveal.js
 	pandoc -t revealjs -s $(OUTPUT_NAME).md -o $(OUTPUT_NAME).html -V revealjs-url=./reveal.js -V theme=solarized -f 'markdown+emoji'
+
+
+pdf:
+	npm i decktape
+	$(npm bin)/decktape -s 1280x720 automatic file://$(pwd)/040coders-lightning-talk.html
