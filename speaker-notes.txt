@@ -1,0 +1,66 @@
+Hi, and welcome to my talk about conscripting your kids into coding service.
+Contrary to what you might think, conscripting does not have anything to do with scripting languages -- I'll leave that to others to talk about.
+No, this talk is about how to take advantage of opportunities in regard with kids to recruit them into coding service.
+We all know the world is more and more revolving around computers (and therefore programming), we'd better prepare our kids for it don't we?
+So, probably not all of you have kids..
+But, you might identify with this situation:
+
+<spaceship conversation>
+
+Yeah, you'll know what I mean.
+It can be frustrating.
+However! This is the perfect moment to bring up the topic of recursive functions!
+First: a definition:
+> A recursive function, in logic and mathematics, is a type of function or expression predicating some concept or property of one or more variables, which is specified by a procedure that yields values or instances of that function by repeatedly applying a given relation or routine operation to know values of the function.
+Nice. So now we've got that out of the way, we can start coding!
+I'm a C++ guy, so that's what I'm going to teach the kids. Simple, right?
+You fire up a PC, install one of Clang/GCC/VSC/ICC/EDG/etc., shop for an editor/IDE from VS/Eclipse/QtCreator/CLion/KDevelop/Xcode/Emacs/Vim/etc. but eventually choose Vim of course -- duh, choose a build system from GNU Make/autotools/CMake/meson/VS project/ninja/bash scripts/bazel/etc. and start coding if you're still able to look straight.
+We start with a simple function that calculates us the speed of our space ship.
+Which eventually is infinite of course, as it should be.
+By the way: this is a good spot to bring up tail recursion vs. augmented recursion.
+We call the function and that's it.
+So now it's time to dress up this example a bit.
+The hip kids use lambdas, so are we.
+Hmmm....but does this work?
+Well it does if you use C++17, which is when recursive lambdas have been introduced.
+This is a good point to introduce the C++ release process as well.
+We will lose some readability though, but hey, there's no such thing as a free lunch eh?
+It turns out, the real, real hip kids these days create code that runs at compile time.
+So we create this recursive constant expression function that will calculate the space ship speed at compile-time, awesome!
+No.
+Not so awesome, because a constexpr function does not necessarily have to run at compile-time..it only can.
+So, we need a nice way to force compile-time execution...hmmm let me think.
+Let's introduce templates! Yay!
+If we now feed the result of the constant expression function as a template argument, it will be used at compile-time for sure.
+As you can see we have this nice struct OmgWtf here containing a single value that is compile-time initialized with a template argument value, great!
+But now we're fiddling around with a template class we might as well add a parameter to handle the template argument type, let's do that.
+Now we have both a template parameter and a template argument for OmgWtf, good stuff.
+To keep things clean here we'll introduce a constant expression variable.
+Now, it would be even more awesome if we'd use a lambda in here somewhere as well just to spice things up a bit...hmmmm
+Yep, we'll put it here.
+Aaaaand now we're at it, let's use an immediately invoked function expression here to get rid of the get_value handle.
+We can leave out the parentheses of the lambda when there's no argument.
+Veerryyy nice!
+...
+Ok that went a little sideways.
+The kids are probably asleep by now.
+But what I meant to portrait is, be on the lookout for recruitment opportunities.
+Get them when they're in the middle of something that relates to some programming paradigm.
+For instance: multithreading issues: multiple children means multithreading issues.
+Toys are shared resources, which obviously goes wrong; races and deadlocks occur.
+All the time.
+Another one: resource overcommit.
+Have you ever been at a party with lots of little kids?
+Not only your resources will be overcommitted, so will theirs, with all the consequences for the coming days!
+Okay, one last example: I hear myself say:
+Hey, would you please clean up your toys?
+..silence..
+Hey, would you please clean up your toys?
+..silence..
+HEY, now will you please clean up your toys?
+..silence..
+eh..yes.
+..still silence..
+This is in some ways similar to write-only memory!
+This paper is quite a fun read by the way.
+Thank you!
